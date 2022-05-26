@@ -126,7 +126,7 @@ func TraceBytecode(cfg *runtime.Config, bytecode []byte, printCSV bool, sampleId
 
 func MeasureTotal(cfg *runtime.Config, bytecode []byte, printEach bool, printCSV bool, sampleId int) {
 	cfg.EVMConfig.Instrumenter = vm.NewInstrumenterLogger()
-	go_runtime.GC()
+// 	go_runtime.GC()
 
 	_, _, err := runtime.Execute(bytecode, calldata, cfg)
 
